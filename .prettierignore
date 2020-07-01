@@ -1,0 +1,7 @@
+.rts2_cache_*
+node_modules
+.*ignore
+dist
+LICENSE
+.vscode
+yarn.lock

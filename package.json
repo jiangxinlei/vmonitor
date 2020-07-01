@@ -1,0 +1,50 @@
+{
+	"name": "vmonitor",
+	"version": "0.0.0",
+	"description": "monitor",
+	"source": "src/index.js",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"unpkg": "dist/index.umd.js",
+	"types": "dist/index.d.ts",
+	"amdName": "index",
+	"scripts": {
+		"format": "prettier --write '**'",
+		"start": "parcel demo/index.html --out-dir demo/dist --open --no-cache",
+		"build": "rm -rf dist && microbundle --external react --globals react=React --strict --no-compress"
+	},
+	"keywords": [
+		"lib"
+	],
+	"author": "jiangxinlei",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.9.35",
+		"@types/react-dom": "^16.9.8",
+		"husky": "^4.2.5",
+		"less": "^3.11.1",
+		"lint-staged": "^10.2.2",
+		"microbundle": "^0.11.0",
+		"parcel-bundler": "^1.12.4",
+		"prettier": "^2.0.5",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"ts-node": "^8.10.1",
+		"typescript": "^3.9.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*": [
+			"prettier --write",
+			"git add ."
+		]
+	},
+	"dependencies": {
+		"localforage": "^1.7.4",
+		"user-agent": "^1.0.4"
+	}
+}
