@@ -1,6 +1,6 @@
 {
 	"name": "vmonitor",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "monitor",
 	"source": "src/index.js",
 	"main": "dist/index.js",
