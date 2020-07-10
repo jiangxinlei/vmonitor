@@ -1,6 +1,7 @@
 import { useTracker } from '../utils/tracker';
 import { getLastEvent, getSelectors } from '../utils/util';
 
+// 卡顿
 function injectLongTask() {
   new PerformanceObserver(list => { 
     list.getEntries().forEach(entry => {

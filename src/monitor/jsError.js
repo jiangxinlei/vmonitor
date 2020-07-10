@@ -21,6 +21,7 @@ function injectJsError() {
       useTracker('resourceError', resourceErrorLog);
       
     } else {
+      console.log(e);
       // js 异常
       const jsErrorLog = {
         kind: 'stability',                   // 监控指标的大类
