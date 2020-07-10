@@ -21,7 +21,6 @@ function injectJsError() {
       useTracker('resourceError', resourceErrorLog);
       
     } else {
-      console.log(e);
       // js 异常
       const jsErrorLog = {
         kind: 'stability',                   // 监控指标的大类
@@ -30,7 +29,7 @@ function injectJsError() {
         message: e.message,                  // 报错信息
         filename: e.filename,                // 哪个文件报错
         position: `${e.lineno}:${e.colno}`,  // 行列
-        stack: getStackLines(e.error.stack),
+        stack: getStackLines(e.error ? e.error.stack : ''),
         selector: lastEvent ? getSelectors(lastEvent.path) : '', // 代表最后一个操作的元素
       };
 
