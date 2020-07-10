@@ -1,7 +1,8 @@
 {
 	"name": "vmonitor",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "monitor",
+	"author": "jiangxinlei",
 	"source": "src/index.js",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -16,7 +17,14 @@
 	"keywords": [
 		"lib"
 	],
-	"author": "jiangxinlei",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jiangxinlei/vmonitor.git"
+	},
+	"homepage": "https://github.com/jiangxinlei/vmonitor#readme",
+	"bugs": {
+		"url": "https://github.com/jiangxinlei/vmonitor/issues"
+	},
 	"license": "MIT",
 	"devDependencies": {
 		"husky": "^4.2.5",

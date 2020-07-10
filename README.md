@@ -24,5 +24,5 @@
 在html里直接引入：
 
 ```
-https://cdn.jsdelivr.net/npm/vmonitor/dist/index.min.js
+https://cdn.jsdelivr.net/npm/vmonitor@{version}/dist/index.min.js
 ```
