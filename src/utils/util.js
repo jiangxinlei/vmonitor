@@ -36,19 +36,22 @@ function getSelectors(pathsOrTarget) {
     return getSelector(path);
   }
 }
+let lastEvent;
 
 function getLastEvent() {
   const events = ['click', 'touchstart', 'mousedown', 'keydown', 'mouseover'];
-  let lastEvent;
+
   events.forEach(eventType => {
     document.addEventListener(eventType, (event) => {
+      // console.log(event);
       lastEvent = event;
     }, {
       capture: true,  // 捕获阶段
       passive: true   // 默认不阻止默认事件
     });
-});
-    return lastEvent;
+  });
+  console.log(lastEvent);
+  return lastEvent;
 }
 
 function getStackLines(stack) {

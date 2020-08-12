@@ -48,6 +48,7 @@ function useTracker(logType, data = {}) {
   localforage.getItem(logType, (err, value) => {
     if (err == null && value) {
       value.push({...data});
+
       localforage.setItem(logType, value, (res) => {
         if (res === null) {
           console.log(`${logType}-set success`);
